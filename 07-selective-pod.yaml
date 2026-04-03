@@ -1,0 +1,19 @@
+cat <<EOF > yaml-files/07-selective-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: selective-pod
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: env
+            operator: In
+            values:
+            - lab
+  containers:
+  - name: nginx
+    image: nginx:latest
+EOF
