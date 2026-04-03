@@ -1,0 +1,40 @@
+--- Task 1: nodeName Pod ---
+NAME            READY   STATUS    RESTARTS   AGE   IP             NODE       NOMINATED NODE   READINESS GATES
+static-pinned   1/1     Running   0          39s   10.244.0.206   minikube   <none>           <none>
+
+--- Task 2: NodeSelector ---
+NAME            READY   STATUS    RESTARTS   AGE   IP             NODE       NOMINATED NODE   READINESS GATES
+selector-demo   1/1     Running   0          14s   10.244.0.207   minikube   <none>           <none>
+
+--- Task 3: Taints & Tolerations ---
+NAME             READY   STATUS    RESTARTS   AGE   IP             NODE       NOMINATED NODE   READINESS GATES
+toleration-pod   1/1     Running   0          16s   10.244.0.208   minikube   <none>           <none>
+
+--- Task 4: Node Affinity ---
+NAME           READY   STATUS    RESTARTS   AGE   IP       NODE     NOMINATED NODE   READINESS GATES
+affinity-pod   0/1     Pending   0          14s   <none>   <none>   <none>           <none>
+
+--- Task 6: DaemonSet ---
+NAME           DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
+node-monitor   0         0         0       0            0           <none>          13s
+
+--- Task 7: Static Pod ---
+NAME                                READY   STATUS                       RESTARTS       AGE
+affinity-pod                        0/1     Pending                      0              4m10s
+db-pod                              1/1     Running                      5 (13m ago)    18d
+emptydir-demo                       2/2     Running                      2 (13m ago)    17d
+env-pod                             1/1     Running                      6 (13m ago)    18d
+fullapp-pod                         1/1     Running                      5 (13m ago)    18d
+hostpath-demo                       1/1     Running                      1 (13m ago)    17d
+logger-pod                          1/1     Running                      12 (13m ago)   27d
+multi-volume-demo                   1/1     Running                      2 (13m ago)    17d
+pvc-demo                            1/1     Running                      1 (13m ago)    17d
+selective-pod                       0/1     CreateContainerConfigError   2 (17d ago)    18d
+selector-demo                       1/1     Running                      0              5m57s
+static-pinned                       1/1     Running                      0              7m26s
+toleration-pod                      1/1     Running                      0              4m58s
+web-pod                             1/1     Running                      12 (13m ago)   27d
+webapp-configured-879d44696-dmtlm   1/1     Running                      5 (13m ago)    18d
+webapp-configured-879d44696-gcqq7   1/1     Running                      5 (13m ago)    18d
+webapp-configured-879d44696-ztgcq   1/1     Running                      5 (13m ago)    18d
+webapp-deploy-7948d59f49-4s4l7      1/1     Running                      4 (13m ago)    20d
