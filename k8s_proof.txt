@@ -38,3 +38,5 @@ webapp-configured-879d44696-dmtlm   1/1     Running                      5 (13m 
 webapp-configured-879d44696-gcqq7   1/1     Running                      5 (13m ago)    18d
 webapp-configured-879d44696-ztgcq   1/1     Running                      5 (13m ago)    18d
 webapp-deploy-7948d59f49-4s4l7      1/1     Running                      4 (13m ago)    20d
+
+--- Task 7: Static Pod Verification ---
