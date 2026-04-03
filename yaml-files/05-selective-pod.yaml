@@ -1,4 +1,3 @@
-cat <<EOF > yaml-files/07-selective-pod.yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -16,4 +15,3 @@ spec:
   containers:
   - name: nginx
     image: nginx:latest
-EOF

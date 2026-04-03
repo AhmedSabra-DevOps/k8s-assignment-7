@@ -1,70 +1,20 @@
---- Task 1: nodeName Pod ---
-NAME            READY   STATUS    RESTARTS   AGE   IP             NODE       NOMINATED NODE   READINESS GATES
-static-pinned   1/1     Running   0          39s   10.244.0.206   minikube   <none>           <none>
-
---- Task 2: NodeSelector ---
-NAME            READY   STATUS    RESTARTS   AGE   IP             NODE       NOMINATED NODE   READINESS GATES
-selector-demo   1/1     Running   0          14s   10.244.0.207   minikube   <none>           <none>
-
---- Task 3: Taints & Tolerations ---
-NAME             READY   STATUS    RESTARTS   AGE   IP             NODE       NOMINATED NODE   READINESS GATES
-toleration-pod   1/1     Running   0          16s   10.244.0.208   minikube   <none>           <none>
-
---- Task 4: Node Affinity ---
-NAME           READY   STATUS    RESTARTS   AGE   IP       NODE     NOMINATED NODE   READINESS GATES
-affinity-pod   0/1     Pending   0          14s   <none>   <none>   <none>           <none>
-
---- Task 6: DaemonSet ---
-NAME           DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
-node-monitor   0         0         0       0            0           <none>          13s
-
---- Task 7: Static Pod ---
-NAME                                READY   STATUS                       RESTARTS       AGE
-affinity-pod                        0/1     Pending                      0              4m10s
-db-pod                              1/1     Running                      5 (13m ago)    18d
-emptydir-demo                       2/2     Running                      2 (13m ago)    17d
-env-pod                             1/1     Running                      6 (13m ago)    18d
-fullapp-pod                         1/1     Running                      5 (13m ago)    18d
-hostpath-demo                       1/1     Running                      1 (13m ago)    17d
-logger-pod                          1/1     Running                      12 (13m ago)   27d
-multi-volume-demo                   1/1     Running                      2 (13m ago)    17d
-pvc-demo                            1/1     Running                      1 (13m ago)    17d
-selective-pod                       0/1     CreateContainerConfigError   2 (17d ago)    18d
-selector-demo                       1/1     Running                      0              5m57s
-static-pinned                       1/1     Running                      0              7m26s
-toleration-pod                      1/1     Running                      0              4m58s
-web-pod                             1/1     Running                      12 (13m ago)   27d
-webapp-configured-879d44696-dmtlm   1/1     Running                      5 (13m ago)    18d
-webapp-configured-879d44696-gcqq7   1/1     Running                      5 (13m ago)    18d
-webapp-configured-879d44696-ztgcq   1/1     Running                      5 (13m ago)    18d
-webapp-deploy-7948d59f49-4s4l7      1/1     Running                      4 (13m ago)    20d
-
---- Task 7: Static Pod Verification ---
-
---- FINAL VERIFICATION: ALL PODS STATUS ---
-NAME                                READY   STATUS                       RESTARTS       AGE   IP             NODE       NOMINATED NODE   READINESS GATES
-affinity-pod                        0/1     Pending                      0              47m   <none>         <none>     <none>           <none>
-db-pod                              1/1     Running                      5 (56m ago)    18d   10.244.0.195   minikube   <none>           <none>
-emptydir-demo                       2/2     Running                      2 (56m ago)    18d   10.244.0.205   minikube   <none>           <none>
-env-pod                             1/1     Running                      6 (56m ago)    19d   10.244.0.192   minikube   <none>           <none>
-fullapp-pod                         1/1     Running                      5 (56m ago)    18d   10.244.0.197   minikube   <none>           <none>
-hostpath-demo                       1/1     Running                      1 (56m ago)    18d   10.244.0.198   minikube   <none>           <none>
-logger-pod                          1/1     Running                      12 (56m ago)   27d   10.244.0.201   minikube   <none>           <none>
-multi-volume-demo                   1/1     Running                      2 (56m ago)    17d   10.244.0.202   minikube   <none>           <none>
-pvc-demo                            1/1     Running                      1 (56m ago)    17d   10.244.0.204   minikube   <none>           <none>
-selective-pod                       0/1     CreateContainerConfigError   2 (17d ago)    19d   10.244.0.196   minikube   <none>           <none>
-selector-demo                       1/1     Running                      0              49m   10.244.0.207   minikube   <none>           <none>
-static-pinned                       1/1     Running                      0              50m   10.244.0.206   minikube   <none>           <none>
-toleration-pod                      1/1     Running                      0              48m   10.244.0.208   minikube   <none>           <none>
-web-pod                             1/1     Running                      12 (56m ago)   27d   10.244.0.182   minikube   <none>           <none>
-webapp-configured-879d44696-dmtlm   1/1     Running                      5 (56m ago)    18d   10.244.0.188   minikube   <none>           <none>
-webapp-configured-879d44696-gcqq7   1/1     Running                      5 (56m ago)    18d   10.244.0.193   minikube   <none>           <none>
-webapp-configured-879d44696-ztgcq   1/1     Running                      5 (56m ago)    18d   10.244.0.194   minikube   <none>           <none>
-webapp-deploy-7948d59f49-4s4l7      1/1     Running                      4 (56m ago)    20d   10.244.0.190   minikube   <none>           <none>
-
---- DAEMONSET STATUS ---
-NAME           DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
-node-monitor   0         0         0       0            0           <none>          46m
-
---- NODE LABELS ---
-minikube   Ready    control-plane   31d   v1.34.0   beta.kubernetes.io/arch=amd64,beta.kubernetes.io/os=linux,env=lab,kubernetes.io/arch=amd64,kubernetes.io/hostname=minikube,kubernetes.io/os=linux,minikube.k8s.io/commit=65318f4cfff9c12cc87ec9eb8f4cdd57b25047f3,minikube.k8s.io/name=minikube,minikube.k8s.io/primary=true,minikube.k8s.io/updated_at=2026_03_02T20_20_47_0700,minikube.k8s.io/version=v1.37.0,node-role.kubernetes.io/control-plane=,node.kubernetes.io/exclude-from-external-load-balancers=
+--- FINAL STATUS CHECK ---
+NAME                                READY   STATUS    RESTARTS       AGE
+affinity-pod                        0/1     Pending   0              17s
+db-pod                              1/1     Running   6 (27m ago)    19d
+emptydir-demo                       2/2     Running   2 (90m ago)    18d
+env-pod                             1/1     Running   7 (27m ago)    19d
+fullapp-pod                         1/1     Running   6 (27m ago)    19d
+hostpath-demo                       1/1     Running   1 (90m ago)    18d
+logger-pod                          1/1     Running   12 (90m ago)   27d
+multi-volume-demo                   1/1     Running   3 (27m ago)    18d
+pvc-demo                            1/1     Running   1 (90m ago)    18d
+selective-pod                       0/1     Pending   0              17s
+selector-demo                       1/1     Running   0              83m
+static-pinned                       1/1     Running   0              84m
+toleration-pod                      1/1     Running   0              82m
+web-pod                             1/1     Running   12 (90m ago)   27d
+webapp-configured-879d44696-dmtlm   1/1     Running   6 (27m ago)    19d
+webapp-configured-879d44696-gcqq7   1/1     Running   6 (27m ago)    19d
+webapp-configured-879d44696-ztgcq   1/1     Running   6 (27m ago)    19d
+webapp-deploy-7948d59f49-4s4l7      1/1     Running   4 (90m ago)    20d
